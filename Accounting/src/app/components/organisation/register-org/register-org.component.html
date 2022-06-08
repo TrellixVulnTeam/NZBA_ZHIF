@@ -1,0 +1,70 @@
+<div class="bootstrap-wrapper" >
+  
+<form *ngIf="OrganisationDTO" class="form-container mt20"  (submit)="addOrganisation()">
+    <mat-card class="full-width-table mt20" >
+        <mat-card-title class="full-width-table text-center">Add Organisation</mat-card-title>
+     
+        
+      <mat-card-content class="mt20 ">
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field class="full-width">
+              <input [(ngModel)]="OrganisationDTO.orgName" type="text" name="name" matInput placeholder="Name">
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field class="full-width">
+              <input type="text" [(ngModel)]="OrganisationDTO.shortCode" name="shortCode" matInput placeholder="Short Code">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="full-width">
+                <input type="text" [(ngModel)]="OrganisationDTO.gstNumber" name="gstNumber" matInput placeholder="GST Number">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="full-width">
+                <input type="text" [(ngModel)]="OrganisationDTO.addressStreet1" name="addressStreet1" matInput placeholder="Address Street 1">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+            <mat-form-field class="full-width">
+                <input type="text" [(ngModel)]="OrganisationDTO.addressCityTown" name="addressCityTown" matInput placeholder="City">
+            </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+            <mat-form-field class="full-width">
+                <input type="text" [(ngModel)]="OrganisationDTO.postCode" name="postCode" matInput placeholder="Post Code">
+            </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            <mat-form-field class="full-width">
+                <input type="text" [(ngModel)]="OrganisationDTO.phonePrefix" name="phonePrefix" matInput placeholder="PhonePrefix">
+            </mat-form-field>
+            </div>
+            <div class="col-md-6">
+            <mat-form-field class="full-width">
+                <input type="text" [(ngModel)]="OrganisationDTO.phone" name="phone" matInput placeholder="Phone">
+            </mat-form-field>
+            </div>
+        </div>
+      
+      </mat-card-content>
+      <mat-card-actions>
+        <button  mat-raised-button color="primary" type="submit">Save</button>
+        <button class="ml20" mat-raised-button color="" [routerLink]="['/organisation']">Cancel</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+
+</div>
